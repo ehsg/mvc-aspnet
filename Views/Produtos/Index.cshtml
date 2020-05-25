@@ -1,9 +1,8 @@
-@model IEnumerable<mvc_aspnet.Models.Categoria>
+@model IEnumerable<mvc_aspnet.Models.Produto>
 
 @{
     ViewData["Title"] = "Home Page";
 }
-
 
 <!DOCTYPE html>
 
@@ -22,6 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Descricao)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCategoria)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -30,6 +35,12 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCategoria)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

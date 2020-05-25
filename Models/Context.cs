@@ -15,7 +15,9 @@ namespace mvc_aspnet.Models
         {
         }
 
-        public virtual DbSet<Categorias> Categorias { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+
+        public DbSet<Produto> Produtos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,7 +29,7 @@ namespace mvc_aspnet.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Categorias>(entity =>
+            modelBuilder.Entity<Categoria>(entity =>
             {
                 entity.Property(e => e.Id).HasColumnName("id");
             });
