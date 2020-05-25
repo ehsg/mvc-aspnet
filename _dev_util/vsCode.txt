@@ -1,0 +1,9 @@
+Nova Solução
+dotnet new solution
+dotnet sln add <PATH>
+
+Referencia
+dotnet add reference <PATH>
+
+Mocking framework
+dotnet add package moq
